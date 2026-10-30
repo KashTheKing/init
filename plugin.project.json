@@ -1,0 +1,38 @@
+{
+	"name": "InitFramework",
+	"tree": {
+		"$className": "Folder",
+		"Plugin": { "$path": "plugin/Plugin.server.luau" },
+		"Setup": {
+			"$className": "Folder",
+			"Init": { "$path": "src/Init" },
+			"InitServer": {
+				"$path": "example/ServerScriptService/InitServer.server.luau",
+				"$properties": { "Enabled": false }
+			},
+			"InitClient": {
+				"$path": "example/StarterPlayerScripts/InitClient.client.luau",
+				"$properties": { "Enabled": false }
+			},
+			"PreloadAssets": {
+				"$path": "plugin/PreloadAssets.client.luau",
+				"$properties": { "Enabled": false }
+			},
+			"Assets": {
+				"$className": "Folder",
+				"Animations": { "$className": "Folder" },
+				"Models": { "$className": "Folder" },
+				"VFX": { "$className": "Folder" },
+				"SFX": { "$className": "Folder" },
+				"Music": { "$className": "Folder" },
+				"Images": { "$className": "Folder" },
+				"Misc": { "$className": "Folder" },
+				"UI": { "$className": "Folder" }
+			},
+			"SFX": { "$className": "SoundGroup" },
+			"Music": { "$className": "SoundGroup" },
+			"Packages": { "$path": "plugin/Packages" }
+		},
+		"Templates": { "$path": "templates" }
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"name": "Init example",
+	"tree": {
+		"$className": "DataModel",
+		"ReplicatedStorage": {
+			"$path": "example/ReplicatedStorage",
+			"Packages": {
+				"$className": "Folder",
+				"Init": { "$path": "src/Init" }
+			}
+		},
+		"ServerScriptService": {
+			"$path": "example/ServerScriptService"
+		},
+		"StarterPlayer": {
+			"StarterPlayerScripts": {
+				"$path": "example/StarterPlayerScripts"
+			}
+		}
+	}
+}

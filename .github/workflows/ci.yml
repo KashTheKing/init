@@ -1,0 +1,12 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: CompeyDev/setup-rokit@v0.2.1
+      - run: lune run tests/run
+      - run: stylua --check src templates example plugin/Plugin.server.luau plugin/PreloadAssets.client.luau tests/run.luau
+      - run: selene generate-roblox-std && selene src templates example plugin/Plugin.server.luau plugin/PreloadAssets.client.luau tests/run.luau
+      - run: rojo build default.project.json -o Init.rbxm

@@ -1,0 +1,85 @@
+title = "Init"
+gitRepoUrl = "https://github.com/KashTheKing/init"
+gitSourceBranch = "main"
+changelog = false
+
+[docusaurus]
+url = "https://kashtheking.com"
+baseUrl = "/init/"
+organizationName = "KashTheKing"
+projectName = "init"
+tagline = "A module loader for Roblox games. Drop modules in folders; Init loads, initializes and starts them in order."
+favicon = "img/favicon.svg"
+trailingSlash = true
+onBrokenAnchors = "ignore"
+
+[navbar]
+title = "Init"
+
+[navbar.logo]
+src = "img/favicon.svg"
+alt = "Init"
+
+[[navbar.items]]
+to = "/docs/install/no-code"
+label = "Install"
+position = "left"
+
+[[navbar.items]]
+to = "/docs/guides/templates"
+label = "Templates"
+position = "left"
+
+[[navbar.items]]
+to = "/docs/install/with-ai"
+label = "Use with AI"
+position = "left"
+
+[[navbar.items]]
+href = "https://create.roblox.com/store/asset/77164672536940/Init-Framework"
+label = "Get the plugin"
+position = "right"
+
+[[navbar.items]]
+href = "https://discord.gg/6HYgCk22eD"
+label = "Discord"
+position = "right"
+
+[home]
+enabled = true
+includeReadme = true
+
+[[home.features]]
+title = "No code to set up"
+description = "Install the Init Framework plugin, press Setup, and your game has a loader, boot scripts and folders. Add modules with one click from templates."
+
+[[home.features]]
+title = "Made for AI"
+description = "An AI skill, copy-paste prompts and raw templates let Claude, Cursor or ChatGPT install Init and write modules the right way."
+
+[[home.features]]
+title = "Predictable startup"
+description = "Folders load in the order you list them. Every Init runs before any Start, and OnPlayerAdded, Step, OnCharacterAdded and friends are wired up for you."
+
+[footer]
+style = "dark"
+copyright = "Copyright © 2026 KashTheKing. Init is MIT licensed; the Init Framework plugin is Apache-2.0."
+
+[[footer.links]]
+title = "Docs"
+items = [
+	{ label = "What is Init?", to = "/docs/intro" },
+	{ label = "Install without code", to = "/docs/install/no-code" },
+	{ label = "Install with AI", to = "/docs/install/with-ai" },
+	{ label = "Install with Wally", to = "/docs/install/wally" },
+	{ label = "API reference", to = "/api/Init" },
+]
+
+[[footer.links]]
+title = "More"
+items = [
+	{ label = "GitHub", href = "https://github.com/KashTheKing/init" },
+	{ label = "Wally package", href = "https://wally.run/package/kashtheking/init" },
+	{ label = "KashTheKing's Library", href = "https://kashtheking.com/library/" },
+	{ label = "Discord server", href = "https://discord.gg/6HYgCk22eD" },
+]

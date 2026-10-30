@@ -1,0 +1,6 @@
+std = "roblox"
+exclude = ["src/Init/Promise/Promise.luau", "tests/lib/**", "**/Packages/**", "build/**", "node_modules/**"]
+
+[config]
+# templates have empty methods on purpose
+unused_variable = { ignore_pattern = "^_|^self$" }

@@ -1,0 +1,10 @@
+{
+	"name": "init",
+	"private": true,
+	"description": "Init, a module loader for Roblox. Docs at https://kashtheking.com/init/",
+	"scripts": {
+		"docs:dev": "moonwave dev --code src/Init/init.luau",
+		"docs:build": "node scripts/build-docs.js",
+		"publish:docs": "node scripts/publish-docs.js"
+	}
+}
