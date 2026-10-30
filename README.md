@@ -46,7 +46,7 @@ return CoinService
 | [`src/Init`](src/Init) | The package (`kashtheking/init`) |
 | [`templates`](templates) | Module templates (Service, Controller, Binder, ...), used by the plugin and by AI |
 | [`example`](example) | A starter place: boot scripts, folders, one service and one controller |
-| [`plugin`](plugin) | The Init Framework Studio plugin (Apache-2.0) |
+| [`plugin`](plugin) | The Init Framework Studio plugin (FSL-1.1-ALv2) |
 | [`skills/init/SKILL.md`](skills/init/SKILL.md) | The AI skill |
 | [`docs`](docs) | The docs site (Moonwave) |
 | [`tests`](tests) | Lune tests: `lune run tests/run` |
@@ -59,4 +59,4 @@ rojo serve example.project.json                 # try the example in Studio
 rojo build plugin.project.json -o InitFramework.rbxmx   # after `wally install` in plugin/
 ```
 
-MIT licensed, except `plugin/` (Apache-2.0). Promise is [evaera/roblox-lua-promise](https://github.com/evaera/roblox-lua-promise) (MIT), bundled so Init has no dependencies.
+MIT licensed, except `plugin/` ([FSL-1.1-ALv2](plugin/LICENSE.md): free to use and change, not for a competing product; each version becomes Apache-2.0 after two years). Promise is [evaera/roblox-lua-promise](https://github.com/evaera/roblox-lua-promise) (MIT), bundled so Init has no dependencies.

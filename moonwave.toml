@@ -63,7 +63,7 @@ description = "Folders load in the order you list them. Every Init runs before a
 
 [footer]
 style = "dark"
-copyright = "Copyright © 2026 KashTheKing. Init is MIT licensed; the Init Framework plugin is Apache-2.0."
+copyright = "Copyright © 2026 KashTheKing. Init is MIT licensed; the Init Framework plugin is FSL-1.1-ALv2."
 
 [[footer.links]]
 title = "Docs"

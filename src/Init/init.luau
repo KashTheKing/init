@@ -42,7 +42,7 @@
 	return PointsService
 	```
 
-	See [the lifecycle](/docs/guides/lifecycle) for the exact order things run in.
+	See [the lifecycle](https://kashtheking.com/init/docs/guides/lifecycle) for the exact order things run in.
 ]=]
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
@@ -56,7 +56,7 @@ local Promise = require(script.Promise)
 
 	Every option with its default lives in
 	[`Settings.luau`](https://github.com/KashTheKing/init/blob/main/src/Init/Settings.luau) and on the
-	[settings page](/docs/guides/settings).
+	[settings page](https://kashtheking.com/init/docs/guides/settings).
 ]=]
 export type Settings = DefaultSettings.Settings
 
@@ -369,7 +369,7 @@ end
 	```
 
 	@param entries Entries -- what to load, in order
-	@param settings { [string]: any }? -- overrides for any of the [settings](/docs/guides/settings)
+	@param settings { [string]: any }? -- overrides for any of the [settings](https://kashtheking.com/init/docs/guides/settings)
 	@return Promise<Modules, number, number>
 	@yields false
 ]=]
