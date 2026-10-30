@@ -9,7 +9,7 @@ title: Install with Wally
 
    ```toml
    [dependencies]
-   Init = "kashtheking/init@1.0.0"
+   Init = "kashtheking/init@1.0.1"
    ```
 
 2. `wally install`, and map `Packages` to `ReplicatedStorage.Packages` in your project file.
@@ -29,4 +29,4 @@ title: Install with Wally
 
 Your folders, names and order are yours: change the entries in the boot scripts. See [Entries](../guides/entries.md).
 
-The [templates](../guides/templates.md) are plain `.luau` files you can copy, and the [plugin](no-code.md)'s template buttons work in Rojo games too.
+The [templates](../guides/templates.md) are plain `.luau` files you can copy (Wally also puts them in `Packages/_Index/kashtheking_init@<version>/init/templates/`), and the [plugin](no-code.md)'s template buttons work in Rojo games too.

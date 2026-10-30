@@ -12,7 +12,7 @@
 | --- | --- |
 | New to scripting | Install the [Init Framework plugin](https://create.roblox.com/store/asset/77164672536940/Init-Framework), press **Setup**. [Guide](https://kashtheking.com/init/docs/install/no-code/) |
 | Using an AI (Claude, Cursor, ChatGPT) | Paste the prompt from [Install with AI](https://kashtheking.com/init/docs/install/with-ai/). |
-| Using Rojo + Wally | `Init = "kashtheking/init@1.0.0"` in `wally.toml`. [Guide](https://kashtheking.com/init/docs/install/wally/) |
+| Using Rojo + Wally | `Init = "kashtheking/init@1.0.1"` in `wally.toml`. [Guide](https://kashtheking.com/init/docs/install/wally/) |
 | Using Studio, no plugin | Drag `Init.rbxm` from [Releases](https://github.com/KashTheKing/init/releases/latest) into `ReplicatedStorage.Packages`. |
 
 ## What it looks like
@@ -47,7 +47,7 @@ return CoinService
 | [`templates`](templates) | Module templates (Service, Controller, Binder, ...), used by the plugin and by AI |
 | [`example`](example) | A starter place: boot scripts, folders, one service and one controller |
 | [`plugin`](plugin) | The Init Framework Studio plugin (FSL-1.1-ALv2) |
-| [`skills/init/SKILL.md`](skills/init/SKILL.md) | The AI skill |
+| [`skills/init/SKILL.md`](skills/init/SKILL.md) | The AI skill (also a Claude Code plugin: `/plugin marketplace add KashTheKing/init`) |
 | [`docs`](docs) | The docs site (Moonwave) |
 | [`tests`](tests) | Lune tests: `lune run tests/run` |
 

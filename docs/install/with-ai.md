@@ -5,9 +5,9 @@ title: Install with AI
 
 # Install with AI
 
-Init ships an **AI skill**: one file that teaches an AI how to install Init, where every kind of module goes and the rules to follow. Point your AI at it.
+Init ships an **AI skill**: one file that teaches an AI how to install Init (in a Rojo project or in Studio), where every kind of module goes, the rules to follow, and every template. Point your AI at it.
 
-- Skill: [`https://kashtheking.com/init/SKILL.md`](https://kashtheking.com/init/SKILL.md)
+- Skill, with every template inside: [`https://kashtheking.com/init/SKILL.md`](https://kashtheking.com/init/SKILL.md)
 - Templates (raw): `https://kashtheking.com/init/templates/Service.luau`, `Controller.luau`, `Binder.luau`, ...
 - Everything in one page for AI: [`https://kashtheking.com/init/llms.txt`](https://kashtheking.com/init/llms.txt)
 
@@ -25,15 +25,33 @@ Change the second part to whatever you want built. After setup, you can keep ask
 
 ## Claude Code
 
-Install the skill once and Claude uses it whenever you mention Init:
+Install the plugin once and Claude uses the skill whenever you mention Init. It carries the templates, so it works offline:
 
-```bash
-mkdir -p ~/.claude/skills/init-framework && curl -L https://kashtheking.com/init/SKILL.md -o ~/.claude/skills/init-framework/SKILL.md
+```text
+/plugin marketplace add KashTheKing/init
+/plugin install init@kashtheking-init
 ```
 
-With the **Roblox Studio MCP** connected, Claude can create the modules in Studio and playtest. With a Rojo project, it edits files and runs `wally install`.
+In a Rojo project, Claude edits files and runs `wally install`. With the **Roblox Studio MCP** connected, it can create the modules in Studio and playtest.
 
-## If your AI can't touch Studio
+## Roblox Studio's Assistant
+
+Studio's built-in Assistant can't read web pages, so give it the skill once:
+
+1. Open [`kashtheking.com/init/SKILL.md`](https://kashtheking.com/init/SKILL.md), select everything (Ctrl+A) and copy it.
+2. In Studio's Assistant, type `Save this as a skill named init-framework:` and paste.
+
+It shows up under the Assistant's **Skills** tab and is used whenever you ask for Init things. The Assistant can't install plugins, so press **Setup** in the [plugin](no-code.md) yourself first.
+
+## Cursor, Codex and other coding AIs
+
+In a Rojo project with Init installed by Wally, the skill and templates are on disk at `Packages/_Index/kashtheking_init@<version>/init/skills/init/SKILL.md` and `.../init/templates/`. Add one line to your `AGENTS.md` (or `.cursor/rules`):
+
+```text
+This game uses the Init framework. Before changing modules, read Packages/_Index/kashtheking_init@*/init/skills/init/SKILL.md.
+```
+
+## If your AI can't touch Studio or files
 
 Chat AIs (ChatGPT, Claude.ai) can't click in Studio. Do the setup with the [plugin](no-code.md) (two clicks), then ask the AI for module code and paste it into a module the plugin made.
 

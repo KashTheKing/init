@@ -29,7 +29,10 @@ execSync("moonwave build --code src/Init/init.luau --out-dir build/docs", { cwd:
 const out = path.join(root, "build", "docs");
 if (!fs.existsSync(path.join(out, "index.html"))) throw new Error("moonwave build produced no index.html");
 
-fs.copyFileSync(path.join(root, "skills", "init", "SKILL.md"), path.join(out, "SKILL.md"));
+// The served SKILL.md carries every template, so AIs that can't read other files (Studio's Assistant, chats) have them
+let skill = read("skills/init/SKILL.md").trimEnd() + "\n\n## Templates\n";
+for (const file of templates) skill += `\n### ${file}\n\n\`\`\`${file.endsWith(".json") ? "json" : "lua"}\n${read(`templates/${file}`).trim()}\n\`\`\`\n`;
+fs.writeFileSync(path.join(out, "SKILL.md"), skill);
 fs.mkdirSync(path.join(out, "templates"), { recursive: true });
 for (const file of templates) fs.copyFileSync(path.join(root, "templates", file), path.join(out, "templates", file));
 
@@ -37,5 +40,5 @@ for (const file of templates) fs.copyFileSync(path.join(root, "templates", file)
 const docs = ["intro.md", "install/no-code.md", "install/with-ai.md", "install/wally.md", "install/model.md",
 	"guides/lifecycle.md", "guides/entries.md", "guides/settings.md", "guides/troubleshooting.md", "migrating.md"];
 const strip = (md) => md.replace(/^---[\s\S]*?---\n/, "");
-fs.writeFileSync(path.join(out, "llms.txt"), [read("skills/init/SKILL.md"), ...docs.map((d) => strip(read(`docs/${d}`)))].join("\n\n---\n\n"));
+fs.writeFileSync(path.join(out, "llms.txt"), [skill, ...docs.map((d) => strip(read(`docs/${d}`)))].join("\n\n---\n\n"));
 console.log("docs built in build/docs");

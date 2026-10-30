@@ -16,4 +16,4 @@ stylua --check src templates example plugin/*.luau tests/run.luau
 selene src templates example plugin/Plugin.server.luau plugin/PreloadAssets.client.luau tests/run.luau
 ```
 
-Release: bump `wally.toml`, `wally publish`, attach `build/Init.rbxm` and `build/InitFramework.rbxmx` to a GitHub release, `npm run publish:docs`.
+Release: bump `wally.toml` and `.claude-plugin/plugin.json`, `wally publish`, attach `build/Init.rbxm` and `build/InitFramework.rbxmx` to a GitHub release, `npm run publish:docs`.

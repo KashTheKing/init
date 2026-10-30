@@ -1,0 +1,12 @@
+{
+	"name": "kashtheking-init",
+	"description": "KashTheKing's Init framework for Roblox, as a Claude Code plugin.",
+	"owner": { "name": "KashTheKing", "url": "https://kashtheking.com" },
+	"plugins": [
+		{
+			"name": "init",
+			"source": "./",
+			"description": "Build Roblox games on the Init module loader (kashtheking/init): install it in a Rojo project or in Studio, and add Services, Controllers, Binders and more from its templates."
+		}
+	]
+}

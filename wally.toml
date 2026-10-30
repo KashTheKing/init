@@ -1,6 +1,6 @@
 [package]
 name = "kashtheking/init"
-version = "1.0.0"
+version = "1.0.1"
 description = "A module loader for Roblox games: point it at folders and it requires, initializes and starts every module in order, with OnPlayerAdded, OnHeartbeat and friends wired up for you."
 license = "MIT"
 authors = ["KashTheKing"]
@@ -8,6 +8,6 @@ homepage = "https://kashtheking.com/init/"
 repository = "https://github.com/KashTheKing/init"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
-exclude = ["build", "docs", "example", "plugin", "scripts", "skills", "templates", "tests", ".github", ".moonwave", "node_modules", "example.project.json", "plugin.project.json", "moonwave.toml", "package.json", "AGENTS.md", "CLAUDE.md"]
+exclude = ["build", "docs", "example", "plugin", "scripts", "tests", ".github", ".moonwave", "node_modules", ".claude-plugin", "example.project.json", "plugin.project.json", "moonwave.toml", "package.json", "AGENTS.md", "CLAUDE.md"]
 
 [dependencies]
