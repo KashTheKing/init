@@ -8,6 +8,6 @@ homepage = "https://kashtheking.com/init/"
 repository = "https://github.com/KashTheKing/init"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
-include = ["src", "src/**", "default.project.json", "wally.toml", "LICENSE", "README.md"]
+exclude = ["build", "docs", "example", "plugin", "scripts", "skills", "templates", "tests", ".github", ".moonwave", "node_modules", "example.project.json", "plugin.project.json", "moonwave.toml", "package.json", "AGENTS.md", "CLAUDE.md"]
 
 [dependencies]
